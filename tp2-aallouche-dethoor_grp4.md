@@ -55,7 +55,7 @@ else
         echo "Mot de passe incorrect"
 fi
  
- ...
+ ```
  
  ## Exercice 3
  
@@ -80,4 +80,4 @@ then
 else
         echo "erreur"
 fi
- ...
+ ```
