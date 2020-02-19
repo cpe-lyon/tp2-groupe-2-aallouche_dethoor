@@ -10,3 +10,10 @@
   e. usr/games
   
  2.
+ 
+ 
+ 
+ 
+ ## Exercice 2
+ 
+ 
