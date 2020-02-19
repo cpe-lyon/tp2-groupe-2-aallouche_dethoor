@@ -106,6 +106,23 @@ else
         echo "utilisation du script : ${0##*/} nom_utilisateur"
 fi
 ```
+
+## Exercice 5
+```bash
+fact() { 
+        n=$1 
+        if [ $n -eq 0 ] 
+        then 
+                echo 1 
+        else 
+                echo $(( n * `fact $(( n - 1 ))` )) 
+        fi 
+} 
+echo `fact $1`
+
+```
+
+
 ## Exercice 6
 ```bash
 
