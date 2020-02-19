@@ -29,7 +29,11 @@
  7.
  **NOMS='AALLOUCHE DETHOOR'**. Pour afficher et verifier la valeur de la variable **NOMS**, j'execute **echo $NOM** 
  
+8.
+La commande pour afficher "Bonjour a vous deux, binome1 binome 2" est : **echo "Bonjour a vous deux, $NOMS "**
 
+9. 
+**unset** est la commande qui supprime la variable rentrée en parametre. Alors que si on donne aucune valeur a une variable, elle est tout de meme crée. Elle n'aura juste aucune valeur, mais sera quand meme présente.
 
  
  
