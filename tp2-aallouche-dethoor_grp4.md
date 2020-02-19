@@ -26,4 +26,19 @@
  
  ## Exercice 2
  
+ ```bash
+ jaune='\e[1;33m'
+neutre='\e[0;m'
+pass="linux"
+echo -e "${jaune}Entrez votre password de test${neutre}"
+read passtest
+
+if  [ $passtest == $pass ]
+then
+        echo "Mot de passe correct"
+else
+        echo "Mot de passe incorrect"
+fi
+ 
+ ...
  
