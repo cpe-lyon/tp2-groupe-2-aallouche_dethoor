@@ -37,6 +37,9 @@ La commande pour afficher "Bonjour a vous deux, binome1 binome 2" est : **echo "
 
 10.
 Pour afficher "$HOME=*chemin*" j'execute echo "\$HOME=$HOME"
+
+### Programmation Bash ###
+Apres avoir créer le dossier script dans le repertoire personnel, il faut renseigner le chemin dans le PATH pour pouvoir executer les programmes contenus dans ce dossier peut importe ou nous sommes dans l'arborescence. La commande est : **export PATH=$PATH:/home/ahmedaall/script**
  
  
  
