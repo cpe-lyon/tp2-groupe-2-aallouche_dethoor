@@ -40,10 +40,10 @@ Pour afficher "$HOME=*chemin*" j'execute echo "\$HOME=$HOME"
 
 ### Programmation Bash ###
 Apres avoir créer le dossier script dans le repertoire personnel, il faut renseigner le chemin dans le PATH pour pouvoir executer les programmes contenus dans ce dossier peut importe ou nous sommes dans l'arborescence. La commande est : **export PATH=$PATH:/home/ahmedaall/script**
+
+ou dans /etc/environment et ajouter le dossier.
  
- 
- 
- 
+
  ## Exercice 2
  
  ```bash
@@ -65,7 +65,7 @@ fi
  ## Exercice 3
  
  ```bash
- #? /bin/bash
+ #! /bin/bash
 
 function is_number()
 {
@@ -86,3 +86,23 @@ else
         echo "erreur"
 fi
  ```
+
+## Exercice 4
+
+
+```bash 
+#! /bin/bash
+
+if [ "$#" == 1 ]
+
+then
+        if grep "$1" /etc/passwd > /dev/null
+        then
+                echo "utilisateur trouvé !"
+        else
+                echo "utilisateur non trouvé"
+        fi
+else
+        echo "utilisation du script : ${0##*/} nom_utilisateur"
+fi
+```
