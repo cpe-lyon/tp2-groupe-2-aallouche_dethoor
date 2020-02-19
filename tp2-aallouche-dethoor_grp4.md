@@ -106,3 +106,34 @@ else
         echo "utilisation du script : ${0##*/} nom_utilisateur"
 fi
 ```
+## Exercice 6
+```bash
+
+#!/bin/bash
+
+VAL=$(($RANDOM % 1000+1))
+x=1111
+while [ $x -ne $VAL ]
+do
+echo "Rentrez un nombre entre 1 et 1000"
+read x
+
+if [ $x -gt $VAL ]
+then 
+
+echo "C'est moins"
+
+elif [ $x -lt $VAL ]
+then
+echo "C'est plus"
+
+
+elif [ $x -eq $VAL ]
+then
+echo "C'est gagné"
+break
+fi 
+done
+
+
+```
