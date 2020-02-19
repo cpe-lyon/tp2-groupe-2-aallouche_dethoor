@@ -46,7 +46,7 @@ La commande pour afficher "Bonjour a vous deux, binome1 binome 2" est : **echo "
 neutre='\e[0;m'
 pass="linux"
 echo -e "${jaune}Entrez votre password de test${neutre}"
-read passtest
+read -s passtest
 
 if  [ $passtest == $pass ]
 then
@@ -57,3 +57,27 @@ fi
  
  ...
  
+ ## Exercice 3
+ 
+ ```bash
+ #? /bin/bash
+
+function is_number()
+{
+        re='^[+-]?[0-9]+([.][0-9]+)?$'
+        if ! [[ $1 =~ $re ]] ; then
+                return 1
+        else
+                return 0
+        fi
+}
+
+is_number $1
+
+if [ $? == 0 ]
+then
+        echo "c'est bien un nombre réél"
+else
+        echo "erreur"
+fi
+ ...
