@@ -162,90 +162,41 @@ exit
 
 {
 re='^[+-]?[0-9]+([.][0-9]+)?$'
-
         if ! [[ $1 =~ $re ]] ; then
-
-                return 1
-
+               return 1
         else
-
                 return 0
-
         fi
-
 }
-
         echo "Veuillez saisir un nombre à ajouter ou taper \"next\" pour passer à la suite:"
-
         read value
-
-
-
         if [ "$value" = "next" ]; then
-
                 break
-
         fi
-
-
-
         arrayValues+=($value)
-
-
-
 done
-
-
-
 max=-100
-
 min=100
-
 total=0
 
-
-
 for var in "${arrayValues[@]}"
-
 do
-
         if [ "$var" -gt "100" ] || [ "$var" -lt "-100" ]; then
-
                 echo "Veuillez utiliser 3 nombres réelle entre 100 et -100"
-
                 exit 1
-
         fi
-
-
-
         if [ $var -gt $max ]; then
-
                 let max=$var
-
         fi
-
-
-
         if [ $var -lt $min ]; then
-
                 let min=$var
-
         fi
-
-        
-
         let total=total+$var
-
 done
-
-
-
 let average=$total/${#arrayValues[@]}
-
 echo "Max: $max; Min: $min; Moyenne: $average"
 
-              
+             
 
 ```
       
